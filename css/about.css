@@ -1,44 +1,29 @@
+/* main section */
 main {
-    padding: 10vh 10vh 10vh 10vh;
+    padding: 10vh;
     background-color: blue;
 }
 
-main .sentence{
+main .sentence {
     font-family: "Escargoth";
     font-size: clamp(1rem, 6vw, 10rem);
     color: white;
 }
 
-
-@media (max-width: 900px) {
-    .year {
-        display: flex;
-        flex-direction: column;
-        
-    }
-}
-main .about{
+main .about {
     font-family: "Jost";
-    color: white;
     font-size: 3vh;
+    color: white;
 }
 
-.history h2{
-    font-family: "Jost";
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(.5rem, 1rem, 2rem);
-    text-align: center;
-    color: blue;
-}
-
-.history{
-    padding: 0px;
+/* history section */
+.history {
+    padding: 0;
     margin: 5vh 10vh 10vh 10vh;
     background-color: white;
 }
 
-.history h1{
+.history h1 {
     font-family: "Escargoth";
     color: blue;
     text-align: center;
@@ -46,20 +31,27 @@ main .about{
     font-weight: 100;
 }
 
-.year{
+.history h2 {
+    font-family: "Jost";
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(0.5rem, 1rem, 2rem);
+    text-align: center;
+    color: blue;
+}
+
+/* years section */
+.year {
     display: flex;
     align-items: center;
     margin: 5vh 10vh 10vh 10vh;
     gap: 10vh;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
-.year .desc{
-    font-family: "Jost";
-    color: blue;
-    font-size: 3vh;
-}
-
-.year h2{
+.year h2 {
     font-family: "Jost";
     color: blue;
     text-align: left;
@@ -68,24 +60,32 @@ main .about{
     font-style: normal;
 }
 
- .year img {
-  max-width: 25rem;
-  height: auto;
+.year .desc {
+    font-family: "Jost";
+    color: blue;
+    font-size: 3vh;
 }
 
-@keyframes appear{
-    from{
+.year img {
+    max-width: 25rem;
+    height: auto;
+}
+
+/* animations */
+@keyframes appear {
+    from {
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-100px);
     }
     to {
         opacity: 1;
-        transform: translateX(0px)
+        transform: translateX(0);
     }
 }
 
-.year{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
+/* Responsive */
+@media (max-width: 900px) {
+    .year {
+        flex-direction: column;
+    }
 }

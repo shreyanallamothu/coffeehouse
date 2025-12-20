@@ -4,15 +4,18 @@
     box-sizing: border-box;
 }
 
+/* body */
 body{
     font-family: "Jost";
     background-color: blue;
 }
 
+/* contact title */
 .contact-left-title{
     text-align: center;
 }
 
+/* headings */
 h2{
     font-family: "Escargoth";
     color: white;
@@ -20,6 +23,7 @@ h2{
     font-weight: 100;
 }
 
+/* contact container */
 .contact-container{
     height: 100vh;
     display: flex;
@@ -27,6 +31,7 @@ h2{
     justify-content: space-evenly;
 }
 
+/* left side */
 .contact-left{
     display: flex;
     flex-direction: column;
@@ -34,6 +39,7 @@ h2{
     gap: 20px;
 }
 
+/* inputs */
 .contact-inputs{
     width: 100vh;
     height: 50px;
@@ -46,21 +52,25 @@ h2{
     color: blue;
 }
 
+/* textarea */
 .contact-left textarea{
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;
 }
 
+/* input animation */
 .contact-inputs:focus{
     border: 5px solid blue;
 }
 
+/* placeholders */
 .contact-inputs::placeholder{
     color: rgb(200, 200, 207);
     font-family: "Jost"
 }
 
+/* button */
 .contact-left button{
     display: flex;
     align-items: center;
@@ -74,24 +84,29 @@ h2{
     color: blue;
 }
 
+/* button focus */
 .contact-left button:focus{
-    border: 5px solid blue;
+    border: 8px solid blue;
 }
 
+/* mobile inputs */
 @media (max-width: 800px){
     .contact-inputs{
         width: 80vw;
     }
 }
 
+/* right side (hidden) */
 .contact-right{
     display: none;
 }
 
+/* footer */
 footer {
     background-color: white;
 }
 
+/* footer headings */
 footer h2{
     color: blue;
 }

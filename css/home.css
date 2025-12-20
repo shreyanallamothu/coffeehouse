@@ -1,3 +1,4 @@
+/* main section */
 #main{
     display: flex;
     position: relative;
@@ -7,10 +8,12 @@
     align-items: center;
 }
 
+/* overlay gif */
 #main .overlay-gif{
     width: min(90vw, 1000px);
 }
 
+/* events section */
 #events{
     background-color: #0000ff;
     color: #ffffff;
@@ -19,6 +22,7 @@
     padding-top: 20px;
 }
 
+/* animation */
 @keyframes appear{
     from{
         opacity: 0;
@@ -30,13 +34,11 @@
     }
 }
 
+/* event layout */
 .event{
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
-}
-
-.event {
     margin: 0px 150px 50px 150px;
     padding-bottom: 20px;
     border-bottom: 3px solid white;
@@ -46,6 +48,7 @@
     justify-content: center;
 }
 
+/* event content */
 .event img {
     width: 300px;
     padding-bottom: 20px;
@@ -60,8 +63,12 @@
 
 .event .inf {
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
 
+/* text inside event */
 .date{
     line-height: 35px;
 }
@@ -80,13 +87,6 @@
 .event .desc{
     font-family: "Jost", sans-serif;
     font-size: 18px;
-
-}
-
-.event .inf{
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
 }
 
 .event .title{
@@ -95,7 +95,9 @@
     line-height: 60px;
 }
 
-.custom-shape-divider-bottom-1765512771 {
+/* shape dividers */
+.custom-shape-divider-bottom-1765512771,
+.custom-shape-divider-bottom-1765513908 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -104,7 +106,8 @@
     line-height: 0;
 }
 
-.custom-shape-divider-bottom-1765512771 svg {
+.custom-shape-divider-bottom-1765512771 svg,
+.custom-shape-divider-bottom-1765513908 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -116,20 +119,7 @@
 }
 
 .custom-shape-divider-bottom-1765513908 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
     transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1765513908 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
 }
 
 .custom-shape-divider-bottom-1765513908 .shape-fill {
