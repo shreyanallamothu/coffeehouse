@@ -83,9 +83,63 @@ main .about {
     }
 }
 
-/* Responsive */
+main {
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.history {
+  margin: clamp(1rem, 4vw, 3rem);
+  padding: 1rem;
+}
+
+.year {
+  display: flex;
+  align-items: center;
+  margin: clamp(1rem, 4vw, 3rem);
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+/* Image spacing */
+.year img {
+  max-width: 25rem;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* Fix paragraph sizing (vh was causing weird scaling) */
+.year .desc {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+}
+
+
+/* ====== MOBILE FIXES ====== */
 @media (max-width: 900px) {
-    .year {
-        flex-direction: column;
-    }
+
+  .year {
+    flex-direction: column;
+    margin: 1.2rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+    main .sentence{
+    font-size: 40px;
+  }
+
+  main .about{
+    font-size: 20px;
+  }
+
+  .history {
+    margin: 1rem;
+  }
+
+  .year img {
+    max-width: 100%;
+    margin: 0.75rem 0;
+  }
+
+  .year h2 {
+    text-align: center;
+  }
 }

@@ -35,22 +35,26 @@
 }
 
 /* event layout */
-.event{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
-    margin: 0px 150px 50px 150px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid white;
-    display: grid;
-    grid-template-columns: auto auto 1fr; 
-    align-items: center;
-    justify-content: center;
+.event {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+
+  border-bottom: 3px solid white;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 50px auto;
+  padding: 0 20px 20px 20px;
+  max-width: 1100px;
 }
 
 /* event content */
 .event img {
-    width: 300px;
+    max-width: 20rem;
     padding-bottom: 20px;
     display: block;
 }
@@ -75,7 +79,7 @@
 
 .date .day{
     font-family: "Escargoth";
-    font-size: 40px;
+    font-size: 1.5rem;
 } 
 
 .event .weekday, .event .time{
@@ -124,4 +128,37 @@
 
 .custom-shape-divider-bottom-1765513908 .shape-fill {
     fill: #0000FF;
+}
+
+@media (max-width: 768px) {
+  .event {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .event img {
+    max-width: 80%;
+    justify-self: center;
+  }
+
+  .event .inf {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .event .desc{
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+}
+
+  .event .date {
+    align-items: center;
+    text-align: center;
+  }
+
+  .event .title {
+    text-align: center;
+    font-size: 36px;
+  }
 }

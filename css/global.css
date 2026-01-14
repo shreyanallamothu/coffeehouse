@@ -95,3 +95,38 @@ footer p {
 .info-block h2 {
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    #home-links a {
+        padding: 5px;
+    }
+    #about-links a{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+
+  /* Header links tighter */
+  #home-links a,
+  #about-links a {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+
+  /* Footer layout fix */
+  #info {
+    flex-direction: column;      /* stack instead of row */
+    justify-content: center;
+    gap: 25px;                  /* clean spacing between blocks */
+    padding: 30px 15px;
+  }
+
+  .info-block h2 {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
+}
